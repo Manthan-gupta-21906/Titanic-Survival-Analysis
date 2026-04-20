@@ -132,7 +132,7 @@ pip install -r requirement.txt
 
 > The combination of being female AND in 1st class gave the highest chance of survival.
 
-![Class and Gender Survival](Data/Images/pclass_and_gender_survival.png)
+![Class and Gender Survival](Images/pclass_and_gender_survival.png)
 
 ---
 
