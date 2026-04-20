@@ -94,6 +94,7 @@ pip install -r requirement.txt
 
 > Survival was not random — it was strongly influenced by social factors.
 
+![Survival Death vs Survived](Images/survival.png)
 ---
 
 ### Q2 — Does Gender affect survival?
@@ -105,7 +106,7 @@ pip install -r requirement.txt
 
 > Females had a much higher survival rate due to the **"women and children first"** evacuation policy.
 
-![Gender vs Survival](./Data/Images/gender_survival.png)
+![Gender vs Survival](Images/gender_survival.png)
 
 ---
 
@@ -119,7 +120,7 @@ pip install -r requirement.txt
 
 > Higher-class passengers had better access to lifeboats and upper decks.
 
-![Survival by Class](Data/Images/survival_by_class.png)
+![Survival by Class](Images/survival_by_class.png)
 
 ---
 
@@ -148,7 +149,7 @@ pip install -r requirement.txt
 
 > Children had the highest survival rate. Age had a secondary effect compared to gender and class.
 
-![Survival by Age Group](Data/Images/survival_by_age_group.png)
+![Survival by Age Group](Images/survival_by_age_group.png)
 
 ---
 
