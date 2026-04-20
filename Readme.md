@@ -105,7 +105,7 @@ pip install -r requirement.txt
 
 > Females had a much higher survival rate due to the **"women and children first"** evacuation policy.
 
-![Gender vs Survival](Data/Images/gender_survival.png)
+![Gender vs Survival](./Data/Images/gender_survival.png)
 
 ---
 
