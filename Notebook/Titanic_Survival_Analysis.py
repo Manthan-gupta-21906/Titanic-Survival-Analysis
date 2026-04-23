@@ -1,23 +1,12 @@
-# Generated from: Titanic_Survival_Analysis.ipynb
-# Converted at: 2026-04-21T16:17:50.675Z
-# Next step (optional): refactor into modules & generate tests with RunCell
-# Quick start: pip install runcell
-
-# # Titanic Survival Analysis
-
-
-# ## 1. Problem Statement
-# 
-# 
+# Titanic Survival Analysis
+## 1. Problem Statement
 # This project analyzes survival patterns of Titanic passengers using data analysis techniques. The goal is to identify key factors influencing survival such as gender, class, and age.
-
-
 import pandas as pd
 import matplotlib.pyplot as plt
 
 df = pd.read_csv("https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv")
 
-# ## 2. Data Understanding
+## 2. Data Understanding
 
 
 print("DATASET OVERVIEW")
@@ -75,7 +64,7 @@ print(df.describe())
 #          
 
 
-# ## 3. Data Preprocessing and Cleaning
+## 3. Data Preprocessing and Cleaning
 
 
 # to check weather it is useful or null 
@@ -104,12 +93,10 @@ df.isnull().sum()
 
 print("DATA PREPROCESSING & CLEANING DONE")
 
-# ## 4. Analysis
+## 4. Analysis
 
 
-# ### Q1: What is survival rate?
-
-
+# Q1: What is survival rate?
 print("ANALYSING SURVIVAL RATES.....")
 df['Survived'].value_counts()  # 0 ---> dead & 1 ---> survived
 
@@ -132,9 +119,7 @@ print(x.round(2))
 # This suggests survival was difficult and likely influenced by factors such as gender, class, and age rather than being random.
 
 
-# ### Q2: Gender Vs Survival?
-
-
+# Q2: Gender Vs Survival?
 print("ANALYSING GENDER VS SURVIVAL.....")
 y=df.groupby('Sex')['Survived'].mean()*100
 print("Gender vs Survival analysis is as follows: ")
@@ -145,9 +130,7 @@ print(y.round(2))
 # This suggests that women were given priority during rescue operations, reflecting the “women and children first” policy followed during the Titanic evacuation.
 
 
-# ### Q3: Class Vs Survival?
-
-
+# Q3: Class Vs Survival?
 print("ANALYSING CLASS VS SURVIVAL.....")
 z=df.groupby('Pclass')['Survived'].mean()*100
 print("Pclass vs Survival analysis is as follows: ")
@@ -158,9 +141,7 @@ print(z.round(2))
 # This likely occurred because higher-class passengers had better access to lifeboats, were closer to upper decks, and received priority during evacuation, whereas lower-class passengers faced more barriers and delays.
 
 
-# ### Q4: Gender VS Class?
-
-
+# Q4: Gender VS Class?
 print("Gender and Class.....")
 x1=df.groupby(['Pclass','Sex'])['Survived'].mean()*100
 print("require analysis is ")
@@ -171,9 +152,7 @@ print(x1.round(2))
 # Survival was strongly influenced by both gender and class together. Women, especially in higher classes, were given the highest priority, while lower-class men were the least prioritized during evacuation.
 
 
-# ### Q5: Age Impact?
-
-
+# Q5: Age Impact?
 print("ANALYSING AGE IMPACT.....")
 df.groupby('Survived')['Age'].mean()
 
@@ -200,7 +179,7 @@ print(df.groupby('Age_Group')['Survived'].value_counts())
 # The strongest factors influencing survival were gender and class, while age had a secondary effect.
 
 
-# ## 5. Visualization
+## 5. Visualization
 
 
 print("SURVIVAL COUNT")
@@ -250,7 +229,7 @@ plt.tight_layout()
 plt.savefig(r"C:\Users\hp\Desktop\Titanic-Survival-Analysis\Images\survival_by_age_group.png")
 plt.show()
 
-# child has more survival all becaus of child and women first policy
+# child has more survival all because of child and women first policy
 
 
 df.groupby(['Pclass','Sex'])['Survived'].mean().unstack().plot(kind='bar')
@@ -275,6 +254,3 @@ plt.show()
 # ### Conclusion
 # 
 # Survival on the Titanic was heavily influenced by social factors such as gender and class rather than being random. Women and higher-class passengers had significantly better chances of survival.
-
-
-#
